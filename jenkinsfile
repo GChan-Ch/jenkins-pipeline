@@ -13,7 +13,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo('Hello Test')
+                echo('Hello Test1')
+                echo('Hello Test2')
+                echo('Hello Test3')
             }
         }
 
