@@ -1,14 +1,10 @@
 @library('JKSlibrary')_
 
 pipeline {
-    agent any
-    stages {
+
         stage("hello world") {
-            steps {
-              script {
-                hello.world()
-                }  
-            }
+        echo "hello world"
+        hello() 
         }
-    }
+    
 }
