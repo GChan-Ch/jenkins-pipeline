@@ -6,7 +6,7 @@ pipeline {
         stage ("hello world") {
             steps {
               script {
-                hello.worls()
+                hello.world()
                 }  
             }
         }
