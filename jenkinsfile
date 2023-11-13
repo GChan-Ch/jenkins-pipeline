@@ -1,4 +1,4 @@
-@Library('JKSlibrary')_
+@Library('JKSlibrary@main')_
  stage('Demo') {
      echo 'Hello world'
      sayHello 'Alex'
