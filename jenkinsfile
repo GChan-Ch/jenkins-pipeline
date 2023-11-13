@@ -1,4 +1,4 @@
-@library('JKSlibrary')_
+@library('JKSlibrary@main')_
 
 pipeline {
 
