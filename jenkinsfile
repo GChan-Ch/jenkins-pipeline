@@ -3,10 +3,6 @@ pipeline {
         node {
             label "linux && java11"
         }
-
-        options {
-  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '1', numToKeepStr: '1')
-}
     }
     stages {
         stage('Build') {
