@@ -1,6 +1,5 @@
-@library('jenkins-shared-library')_
-
-stage('Demo') {
-    echo 'Hello World'
-    sayHello 'Gold'
-}
+@Library('JKSlibrary')_
+ stage('Demo') {
+     echo 'Hello world'
+     sayHello 'Alex'
+ }
