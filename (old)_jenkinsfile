@@ -1,0 +1,45 @@
+pipeline {
+    agent {
+        node {
+            label "linux && java11"
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo('Hello Build')
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo('Hello Test1')
+                echo('Hello Test2')
+                echo('Hello Test3')
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo('Hello Deploy')
+            }
+        }
+
+    }
+
+    post {
+        always {
+            echo "i will always say hello again!"
+        }
+        success {
+            echo "yay, success"
+        }
+        failure {
+            echo "oh n, failure"
+        }
+        cleanup {
+            echo "i will clean"
+        }
+    }
+
+}
