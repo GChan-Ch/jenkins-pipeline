@@ -1,8 +1,17 @@
 @Library('JKSlibrary@main')_
 
+import gold.jenkins.Output;
+
 pipeline {
  agent any
         stages{
+           stage("Helllo Groovy") {
+              steps{
+                script{
+                 Output.hello("Groovy")
+                }
+             }
+        }
            stage("hello world") {
               steps{
                 script{
