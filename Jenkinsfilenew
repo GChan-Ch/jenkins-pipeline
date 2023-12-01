@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+}
+stages{
+    stage('Scan') {
+        steps {
+            withSonarQubeEnv(installationName: 'Sonar-Server') {
+                sh './mvnm clean sonar:sonar'
+            }
+        }
+    }
+}
