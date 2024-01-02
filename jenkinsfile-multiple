@@ -13,6 +13,7 @@ pipeline {
                sh """
                echo "Deploying Code from Develop Branch"
                """
+               sh 'sudo cp -r $WORKSPACE/ /home/gapta/jenkins-test/'
           }
       }
    }
