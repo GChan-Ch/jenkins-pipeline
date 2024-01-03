@@ -16,9 +16,9 @@ pipeline {
                sh """
                echo "Deploying Code from Develop Branch"
                """
-               sh 'sudo cp -r $WORKSPACE/ /home/gapta/jenkins-test/'
-               sh 'echo passwordnya apa ya : $ENV'
+               sh 'echo "passwordnya apa ya : $ENV" > test.txt'
                sh 'env | sort'
+               sh 'sudo cp -r $WORKSPACE/ /home/gapta/jenkins-test/'
           }
       }
    }
