@@ -1,6 +1,6 @@
 pipeline {
    agent any
-   environtment {
+   environment {
       envtest = credentials('envtest')
    stages {
        stage('Build Code') {
