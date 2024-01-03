@@ -1,7 +1,8 @@
 pipeline {
    agent any
    environment {
-      envtest = credentials('envtest')
+      ENV = credentials('envtest')
+   }
    stages {
        stage('Build Code') {
            steps {
@@ -16,10 +17,9 @@ pipeline {
                echo "Deploying Code from Develop Branch"
                """
                sh 'sudo cp -r $WORKSPACE/ /home/gapta/jenkins-test/'
-               sh 'echo passwordnya apa ya : $envtest'
+               sh 'echo passwordnya apa ya : $ENV'
                sh 'env | sort'
           }
       }
    }
-}
 }
